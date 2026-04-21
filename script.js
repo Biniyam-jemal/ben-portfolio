@@ -147,7 +147,8 @@ function initFormValidation() {
     const hireForm = document.getElementById("hire-form");
 
     if (contactForm) {
-        contactForm.addEventListener("submit", (event) => {
+        contactForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
             const name = contactForm.querySelector("#name");
             const email = contactForm.querySelector("#email");
             const message = contactForm.querySelector("#message");
@@ -156,20 +157,24 @@ function initFormValidation() {
             const emailOk = validateEmail(email);
             const messageOk = validateMinLength(message, 10);
 
-            if (!nameOk || !emailOk || !messageOk) {
-                event.preventDefault();
-                return;
-            }
+            if (!nameOk || !emailOk || !messageOk) return;
 
-            event.preventDefault();
-            alert("Contact form looks good. Connect your backend endpoint to submit.");
-            contactForm.reset();
-            clearValidation(contactForm);
+            try {
+                const result = await submitForm(contactForm);
+                const serverMsg = (result && (result.message || result.data || result.msg)) || "Thanks — your message was sent successfully.";
+                showToast(serverMsg, "success");
+                contactForm.reset();
+                clearValidation(contactForm);
+            } catch (err) {
+                console.error(err);
+                showToast(err.message || "Sorry, something went wrong.", "error");
+            }
         });
     }
 
     if (hireForm) {
-        hireForm.addEventListener("submit", (event) => {
+        hireForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
             const company = hireForm.querySelector("#company");
             const workEmail = hireForm.querySelector("#workEmail");
             const hireType = hireForm.querySelector("#hireType");
@@ -180,16 +185,79 @@ function initFormValidation() {
             const typeOk = validateSelect(hireType);
             const messageOk = validateMinLength(hireMessage, 10);
 
-            if (!companyOk || !emailOk || !typeOk || !messageOk) {
-                event.preventDefault();
-                return;
-            }
+            if (!companyOk || !emailOk || !typeOk || !messageOk) return;
 
-            event.preventDefault();
-            alert("Hiring request form looks good. Connect your backend endpoint to submit.");
-            hireForm.reset();
-            clearValidation(hireForm);
+            try {
+                const result = await submitForm(hireForm);
+                const serverMsg = (result && (result.message || result.data || result.msg)) || "Hiring request sent — thank you!";
+                showToast(serverMsg, "success");
+                hireForm.reset();
+                clearValidation(hireForm);
+                // close :target modal by removing hash
+                try { history.replaceState(null, document.title, window.location.pathname + window.location.search); } catch (e) { location.hash = ""; }
+            } catch (err) {
+                console.error(err);
+                showToast(err.message || "Submission failed. Please try again later.", "error");
+            }
         });
+    }
+
+    // Generic form submit helper that posts FormData to the form action
+    async function submitForm(form) {
+        const action = form.getAttribute("action") || "https://api.web3forms.com/submit";
+        const formData = new FormData(form);
+        // ensure access_key is present (keeps existing hidden input)
+        const resp = await fetch(action, { method: "POST", body: formData });
+        let json = null;
+        try {
+            json = await resp.json();
+        } catch (e) {
+            // ignore JSON parse errors
+        }
+
+        // Web3Forms typically responds with a JSON object. Consider the request failed
+        // if server returned non-OK or explicitly indicated failure.
+        if (!resp.ok || (json && (json.success === false || json.status === "error"))) {
+            const msg = (json && (json.message || json.error)) || `Form submit failed: ${resp.status}`;
+            throw new Error(msg);
+        }
+
+        console.log("Form submission response:", json || resp.status);
+        return json || { status: resp.status };
+    }
+
+    // Small toast helper for nicer feedback than alert()
+    function showToast(message, type = "info", timeout = 4500) {
+        const toast = document.createElement("div");
+        toast.className = `form-toast form-toast-${type}`;
+        toast.textContent = message;
+        Object.assign(toast.style, {
+            position: "fixed",
+            right: "20px",
+            bottom: "20px",
+            zIndex: 99999,
+            background: type === "success" ? "#198754" : type === "error" ? "#dc3545" : "#333",
+            color: "#fff",
+            padding: "12px 16px",
+            borderRadius: "8px",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.35)",
+            opacity: "0",
+            transition: "opacity 220ms ease-in-out, transform 220ms",
+            transform: "translateY(8px)",
+            maxWidth: "90%",
+            fontSize: "14px",
+        });
+        document.body.appendChild(toast);
+        // show
+        requestAnimationFrame(() => {
+            toast.style.opacity = "1";
+            toast.style.transform = "translateY(0)";
+        });
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            toast.style.transform = "translateY(8px)";
+            setTimeout(() => toast.remove(), 300);
+        }, timeout);
     }
 
     document.querySelectorAll("#contact-form input, #contact-form textarea, #hire-form input, #hire-form textarea, #hire-form select").forEach((input) => {
