@@ -104,19 +104,6 @@ To personalize or improve the portfolio, update these areas:
 - `script.js` for theme toggle, typing effect, navigation behavior, and form handling
 - `assets/images/` and `assets/icons/` for portfolio visuals and branding
 
-## Important Notes
-
-- Some links in the portfolio still use `#` placeholders and should be replaced with real profile, demo, or resume links.
-- The page references `./assets/CV.pdf`, so add that file if you want the download button to work.
-- Contact and hire forms submit through Web3Forms using the configured access key in `index.html`.
-
-## Future Improvements
-
-- Add real live demo links for each project
-- Replace placeholder social links with final profile URLs
-- Add SEO meta tags and Open Graph tags
-- Add a project filtering or category system
-- Improve accessibility review and keyboard testing
 
 ## Author
 
