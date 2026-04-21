@@ -2,7 +2,7 @@
 
 This is a lightweight portfolio website built with HTML and CSS (no JavaScript required for core interactions).
 
-[View here](https://bati58.github.io/portfolio-pro/)
+[View here](https://bati58.github.io/portfolio-/)
 
 ## Overview
 - Responsive portfolio with sections: Home, About, Skills, Projects, Services, Contact, and UI/UX gallery.
