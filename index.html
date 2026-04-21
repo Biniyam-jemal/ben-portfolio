@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icons/favicon.ico" sizes="any">
+    <title>Portfolio | BEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- DOTTED BACKGROUND -->
+    <div class="dot-bg"></div>
+    <div class="floating-dots" aria-hidden="true">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <div class="page">
+
+
+        <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar">
+            <div class="container">
+                <a class="navbar-brand logo" href="./index.html" aria-label="Refresh and go to home">
+                    <img src="./assets/icons/logo.png" alt="BJ logo" class="site-logo">
+                </a>
+
+                <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+                <label class="navbar-toggler" for="nav-toggle" role="button" aria-controls="nav-links">
+                    <img src="assets/icons/humbarger.svg" alt="menu" class="hamburger-icon">
+                    <img src="assets/icons/close.svg" alt="close menu" class="close-icon">
+                </label>
+
+                <div class="collapse navbar-collapse justify-content-end" id="nav-links">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+
+                    </ul>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-icon" type="button" aria-pressed="false"
+                    aria-label="Toggle color theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+
+        <section id="home" class="section hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <h1 class="display-4 fw-bold mb-3">Hello, I'm <span>Biniyam</span></h1>
+                        <p class="hero-tagline mb-3">Frontend developer currently growing into full-stack development.
+                        </p>
+                        <p class="typing mb-4">I am <span class="typing-phrases" aria-live="polite">
+                                <span>Frontend Developer</span>
+                                <span>Learning Full-Stack Development</span>
+                                <span>JavaScript and React Enthusiast</span>
+                                <span>Building Modern Web Experiences</span>
+                            </span></p>
+
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <a class="btn btn-brand" href="#" target="_blank" rel="noopener noreferrer">View Resume</a>
+                            <a class="btn btn-outline-brand hire-btn" href="#hireRequestModal">Hire Me</a>
+                            <a class="btn btn-soft contact-btn" href="#projects">Check My Work</a>
+                        </div>
+
+                        <div class="row g-3 hero-metrics">
+                            <div class="col-sm-4">
+                                <div class="hero-metric">
+                                    <h3>6+</h3>
+                                    <p>Shipped Projects</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="hero-metric">
+                                    <h3>4</h3>
+                                    <p>Core Stacks</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="hero-metric">
+                                    <h3>100%</h3>
+                                    <p>Responsive Build</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="hero-image-panel">
+                            <img src="./assets/images/ben.jpg" alt="Beni developer profile placeholder"
+                                class="hero-placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERO TICKER removed: was a horizontal scrolling bar below the hero -->
+
+        <section id="about" class="section section-space">
+            <div class="container">
+                <div class="row align-items-start g-4">
+                    <div class="col-lg-7">
+                        <p class="section-label">About</p>
+                        <h2 class="section-title">Building practical products with frontend excellence</h2>
+                        <p class="lead-text">
+                            I am Biniyam, a frontend developer currently working toward full-stack development. I build
+                            responsive web apps with a focus on clarity, performance, and maintainability.
+                        </p>
+                        <p class="lead-text mb-0">
+                            My stack centers on HTML, CSS, JavaScript, and React, while I continue improving backend
+                            skills with Node.js and databases. I am open to opportunities where I can grow and
+                            contribute through real-world product development.
+                        </p>
+
+                        <div class="row g-3 mt-2">
+                            <div class="col-sm-6">
+                                <div class="point-card">
+                                    <h3>Frontend Focus</h3>
+                                    <p>Responsive interfaces with clear interactions and clean implementation.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="point-card">
+                                    <h3>Full-Stack Growth</h3>
+                                    <p>Actively learning backend APIs and data modeling through practical projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="about-image-panel">
+                            <img src="./assets/images/developer.png" alt="Frontend development workspace placeholder"
+                                class="about-placeholder">
+                            <div class="about-social-links mt-3">
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i
+                                        class="fab fa-telegram"></i></a>
+                                <a href="mailto:benmoneymakingonline@gmail.com" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                            <a href="./assets/CV.pdf" class="btn btn-brand about-download-btn mt-3" download>Download
+                                Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-space section-tint">
+            <div class="container">
+                <p class="section-label">Skills</p>
+                <h2 class="section-title">Current toolkit</h2>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card skills-card h-100 border-0">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Frontend</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-chip"><img src="./assets/icons/html.png" alt="HTML">HTML</span>
+                                    <span class="skill-chip"><img src="./assets/icons/css.png" alt="CSS">CSS</span>
+                                    <span class="skill-chip"><img src="./assets/icons/js.png"
+                                            alt="JavaScript">JavaScript</span>
+                                    <span class="skill-chip"><img src="./assets/icons/react.png"
+                                            alt="React">React</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card skills-card h-100 border-0">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Backend</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-chip"><img src="./assets/icons/node.png"
+                                            alt="Node.js">Node.js</span>
+                                    <span class="skill-chip"><img src="./assets/icons/express.png"
+                                            alt="Express">Express</span>
+                                    <span class="skill-chip"><img src="./assets/icons/java.png" alt="Java">Java</span>
+                                    <span class="skill-chip"><img src="./assets/icons/python.png"
+                                            alt="Python">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card skills-card h-100 border-0">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Databases</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-chip"><img src="./assets/icons/mongodb.png"
+                                            alt="MongoDB">MongoDB</span>
+                                    <span class="skill-chip"><img src="./assets/icons/mysql.png"
+                                            alt="MySQL">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card skills-card h-100 border-0">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Tools</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-chip">
+                                        <img src="./assets/icons/git.png" alt="Git and GitHub">
+                                        Git/GitHub
+                                    </span>
+                                    <span class="skill-chip">
+                                        <img src="./assets/icons/vs.png" alt="VS Code">
+                                        VS Code
+                                    </span>
+                                    <span class="skill-chip"><img src="./assets/icons/js.png" alt="REST APIs">REST
+                                        APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section section-space">
+            <div class="container">
+                <p class="section-label">Projects</p>
+                <h2 class="section-title">Featured work</h2>
+
+                <div class="row g-4 mt-1">
+                    <article class="col-md-6 col-xl-4">
+                        <div class="card project-card h-100 border-0">
+                            <img src="./assets/images/todo.png" class="card-img-top project-image"
+                                alt="To-Do List App preview">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                    <h3 class="h5 mb-0">To-Do List</h3>
+                                    <span class="project-role">Frontend Developer</span>
+                                </div>
+                                <p class="project-summary">Simple and clean task manager with add, edit, delete, and
+                                    completion tracking features for daily productivity.</p>
+                                <div class="project-tech mb-3">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <a href="#" class="btn btn-sm btn-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <a href="#" class="btn btn-sm btn-outline-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i>
+                                        GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-md-6 col-xl-4">
+                        <div class="card project-card h-100 border-0">
+                            <img src="./assets/images/e-commerce.png" class="card-img-top project-image"
+                                alt="E-Commerce Website preview">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                    <h3 class="h5 mb-0">E-Commerce Website</h3>
+                                    <span class="project-role">Full-Stack MERN Developer</span>
+                                </div>
+                                <p class="project-summary">Full-stack MERN e-commerce platform with authentication,
+                                    product management, cart, and checkout workflow.</p>
+                                <div class="project-tech mb-3">
+                                    <span>MongoDB</span>
+                                    <span>Express</span>
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <a href="#" class="btn btn-sm btn-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <a href="#" class="btn btn-sm btn-outline-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-md-6 col-xl-4">
+                        <div class="card project-card h-100 border-0">
+                            <img src="./assets/images/movie.png" class="card-img-top project-image"
+                                alt="Movie Search App preview">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                    <h3 class="h5 mb-0">Movie Search App</h3>
+                                    <span class="project-role">Frontend Developer</span>
+                                </div>
+                                <p class="project-summary">Movie finder app that fetches and displays films by title
+                                    with poster cards, ratings, and lightweight details view.</p>
+                                <div class="project-tech mb-3">
+                                    <span>JavaScript</span>
+                                    <span>API Integration</span>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <a href="#" class="btn btn-sm btn-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <a href="#" class="btn btn-sm btn-outline-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-md-6 col-xl-4">
+                        <div class="card project-card h-100 border-0">
+                            <img src="./assets/images/chat.png" class="card-img-top project-image"
+                                alt="Chat Application UI preview">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                    <h3 class="h5 mb-0">Chat Application UI</h3>
+                                    <span class="project-role">Frontend Developer</span>
+                                </div>
+                                <p class="project-summary">Modern messaging interface with contacts panel, conversation
+                                    threads, typing input area, and mobile-friendly responsive behavior.</p>
+                                <div class="project-tech mb-3">
+                                    <span>React</span>
+                                    <span>CSS</span>
+                                    <span>UI Components</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <a href="#" class="btn btn-sm btn-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <a href="#" class="btn btn-sm btn-outline-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-md-6 col-xl-4">
+                        <div class="card project-card h-100 border-0">
+                            <img src="./assets/images/food.png" class="card-img-top project-image"
+                                alt="Food Delivery Website preview">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                    <h3 class="h5 mb-0">Food Delivery Website</h3>
+                                    <span class="project-role">Full-Stack MERN Developer</span>
+                                </div>
+                                <p class="project-summary">MERN-based food delivery platform with menu browsing, cart,
+                                    order placement, and admin order management dashboard.</p>
+                                <div class="project-tech mb-3">
+                                    <span>MongoDB</span>
+                                    <span>Express</span>
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <a href="#" class="btn btn-sm btn-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <a href="#" class="btn btn-sm btn-outline-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-md-6 col-xl-4">
+                        <div class="card project-card h-100 border-0">
+                            <img src="./assets/images/qoute.png" class="card-img-top project-image"
+                                alt="Quote Generator preview">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                    <h3 class="h5 mb-0">Quote Generator</h3>
+                                    <span class="project-role">Frontend Developer</span>
+                                </div>
+                                <p class="project-summary">Frontend quote generator app with random quote display,
+                                    refresh action, and clean responsive UI.</p>
+                                <div class="project-tech mb-3">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <a href="#" class="btn btn-sm btn-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>
+                                        Live Demo</a>
+                                    <a href="#" class="btn btn-sm btn-outline-brand" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section section-space section-tint">
+            <div class="container">
+                <p class="section-label">Services</p>
+                <h2 class="section-title">Services I can provide for your product</h2>
+
+                <div class="row g-3 mt-1">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="capability-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Build responsive, modern web applications</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="capability-card">
+                            <i class="fas fa-server"></i>
+                            <p>Design RESTful APIs and backend systems</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="capability-card">
+                            <i class="fas fa-database"></i>
+                            <p>Work with MongoDB and MySQL data models</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="capability-card">
+                            <i class="fab fa-git-alt"></i>
+                            <p>Collaborate efficiently with Git and GitHub</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="capability-card">
+                            <i class="fas fa-bolt"></i>
+                            <p>Learn quickly and adapt to new technologies</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="capability-card">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <p>Improve frontend performance and user experience quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section section-space">
+            <div class="container">
+                <p class="section-label">Contact</p>
+                <h2 class="section-title">Let's build something useful</h2>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-lg-5">
+                        <div class="contact-card h-100">
+                            <h3 class="h5">Open to full-time, freelance, and collaboration opportunities.</h3>
+                            <p>I usually reply quickly. Share your goal, timeline, and what success looks like.</p>
+
+                            <ul class="contact-list list-unstyled mb-0">
+                                <li><i class="fas fa-map-marker-alt"></i> Adama, Oromia</li>
+                                <li><i class="fas fa-envelope"></i> benmoneymakingonline@gmail.com</li>
+                                <li><i class="fas fa-phone"></i> +251 91 305 7113</li>
+                            </ul>
+
+                            <div class="social-links mt-4">
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X"><i
+                                        class="fab fa-x-twitter"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i
+                                        class="fab fa-telegram"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                        class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="contact-form-wrap">
+                            <form id="contact-form" method="post" action="#">
+                                <input type="hidden" name="access_key" value="d68ecb1f-a8a0-483a-87ff-1288bc86a240">
+                                <input type="hidden" name="subject" value="New Portfolio Contact Submission">
+                                <input type="hidden" name="from_name" value="Beni Portfolio">
+                                <input type="hidden" name="redirect" value="#">
+                                <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Your Email</label>
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="Your Email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea id="message" name="message" class="form-control" rows="6"
+                                            placeholder="Tell me about your project" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-brand w-100">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-4">
+                        <h2 class="footer-title">Beni</h2>
+                        <p class="footer-text">Frontend developer currently growing into full-stack development.</p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <h3 class="footer-quick-title">Quick Links</h3>
+                        <div class="footer-links-wrap">
+                            <a href="#home">Home</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#about">About</a>
+                            <a href="#skills">Skills</a>
+                            <a href="#services">Services</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="social-links justify-content-lg-end">
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="mailto:benmoneymakingonline@gmail.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer-copy">&copy; 2026 Beni | All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- Hire request modal (CSS :target) -->
+        <div id="hireRequestModal" class="hire-modal" role="dialog" aria-modal="true"
+            aria-labelledby="hireRequestTitle">
+            <div class="hire-modal-content">
+                <a class="close-btn" href="#" aria-label="Close">&times;</a>
+                <h2 id="hireRequestTitle">Hiring Request</h2>
+                <div class="hire-modal-body">
+                    <form id="hire-form" method="post" action="#">
+                        <input type="hidden" name="access_key" value="d68ecb1f-a8a0-483a-87ff-1288bc86a240">
+                        <input type="hidden" name="subject" value="New Hiring Request From Portfolio">
+                        <input type="hidden" name="from_name" value="Beni Portfolio Hire Form">
+                        <input type="hidden" name="redirect" value="#">
+                        <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
+                        <input type="text" id="company" name="company" class="form-control"
+                            placeholder="Company / Your Name" required>
+                        <input type="email" id="workEmail" name="workEmail" class="form-control"
+                            placeholder="Work Email" required>
+                        <select id="hireType" name="hireType" class="form-select" required>
+                            <option value="">Hiring Type</option>
+                            <option>Full-Time</option>
+                            <option>Freelance</option>
+                            <option>Contract</option>
+                            <option>Internship</option>
+                        </select>
+                        <textarea id="hireMessage" name="hireMessage" class="form-control" rows="4"
+                            placeholder="Short message or requirements" required></textarea>
+                        <button type="submit" class="btn btn-brand w-100">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals and JS-driven features removed. CSS-only scroll controls -->
+        <div class="scroll-controls">
+            <a class="to-about" href="#about" aria-label="Scroll to About"><img src="assets/icons/scrolldown.svg"
+                    class="scroll-icon" alt="Scroll down"></a>
+            <a class="to-skills" href="#skills" aria-label="Scroll to Skills"><img src="assets/icons/scrolldown.svg"
+                    class="scroll-icon" alt="Scroll down"></a>
+            <a class="to-projects" href="#projects" aria-label="Scroll to Projects"><img
+                    src="assets/icons/scrolldown.svg" class="scroll-icon" alt="Scroll down"></a>
+            <a class="to-services" href="#services" aria-label="Scroll to Services"><img
+                    src="assets/icons/scrolldown.svg" class="scroll-icon" alt="Scroll down"></a>
+            <a class="to-contact" href="#contact" aria-label="Scroll to Contact"><img src="assets/icons/scrolldown.svg"
+                    class="scroll-icon" alt="Scroll down"></a>
+            <a class="to-home" href="#home" aria-label="Back to top"><img src="assets/icons/scrolldown.svg"
+                    class="scroll-icon scroll-up" alt="Back to top"></a>
+        </div>
+    </div> <!-- .page -->
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
